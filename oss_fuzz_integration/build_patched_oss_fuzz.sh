@@ -37,6 +37,7 @@ cp -rf ../post-processing ./oss-fuzz/infra/base-images/base-builder/post-process
 
 # Skip all.sh if it is in cloud build.
 if [[ $CLOUD_BUILD_ENV != "1" ]]; then
-   cd oss-fuzz
-   ./infra/base-images/all.sh
+  echo 'running all.sh' 
+  cd oss-fuzz
+   #./infra/base-images/all.sh
 fi
