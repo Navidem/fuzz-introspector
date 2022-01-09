@@ -36,7 +36,7 @@ cp -rf ../llvm ./oss-fuzz/infra/base-images/base-clang/llvm
 cp -rf ../post-processing ./oss-fuzz/infra/base-images/base-builder/post-processing
 
 # Skip all.sh if it is in cloud build.
-if [[ $CLOUD_BUILD_ENV != "1" ]]; then
+if [[ -z $CLOUD_BUILD_ENV ]]; then
   echo 'running all.sh' 
   cd oss-fuzz
    #./infra/base-images/all.sh
