@@ -59,6 +59,7 @@ index c934d3b5..d6844e63 100755
 +
 +  find $SRC/ -name "*.data" -exec cp {} $SRC/inspector-tmp/ \;
 +  find $SRC/ -name "*.data.yaml" -exec cp {} $SRC/inspector-tmp/ \;
++  find $OUT/ -name "*.covreport" -exec cp {} $SRC/inspector-tmp/ \;
 +
 +  # Move coverage report in case
 +  if [ -d "$OUT/fuzzer_stats" ]
