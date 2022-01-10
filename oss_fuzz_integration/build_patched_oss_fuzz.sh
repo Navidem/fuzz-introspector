@@ -39,5 +39,5 @@ cp -rf ../post-processing ./oss-fuzz/infra/base-images/base-builder/post-process
 if [[ -z ${CLOUD_BUILD_ENV:+dummy} ]]; then
   echo 'running all.sh' 
   cd oss-fuzz
-   #./infra/base-images/all.sh
+  ./infra/base-images/all.sh
 fi
